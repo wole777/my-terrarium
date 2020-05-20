@@ -60,8 +60,8 @@ function dragElement(terrariumElement) {
 	function closeDragElement() {
 		// stop calculating when mouse is released
 		//9. reset the raised pointer to null
-		document.onpointerup = null
+		document.onpointerup = null;
 		//10. reset the moved pointer to null
-		document.onpointermove = null
+		document.onpointermove = null;
 	}
 }
