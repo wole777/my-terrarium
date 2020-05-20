@@ -26,14 +26,19 @@ function dragElement(terrariumElement) {
 		pos4 = 0;
 
 	//1. when you touch the terrariumElement, start tracking the pointer
+	terrariumElement.onpointerdown = pointerDrag;
 
 	function pointerDrag(e) {
 		e.preventDefault();
 		console.log(e);
 		//2. set pos3 to be e's clientX
+		pos3 = e.clientX;
 		//3. set pos4 to be e's clientY
+		pos4 = e.clientY;
 		//4. when the mouse moves, start the drag
+		document.onpointermove = elementDrag;
 		//5. when the mouse is lifted, stop the drag
+		document.onpointerup = closeDragElement;
 	}
 
 	function elementDrag(e) {
